@@ -9,9 +9,9 @@ CORS(app, supports_credentials=True)
 app.secret_key = 'dljsaklqk24e21cjn!Ew@@dsa5'
 
 
-#Give a unique ID for the drone
+#Give a unique ID for the drone !!DONE!!
 #===================================================================
-myID = "DRONE_ID"
+myID = "DRONE_1"
 #===================================================================
 
 # Get initial longitude and latitude the drone
@@ -26,9 +26,9 @@ drone_info = {'id': myID,
                 'status': 'idle'
             }
 
-# Fill in the IP address of server, and send the initial location of the drone to the SERVER
+# Fill in the IP address of server !!DONE!! , and send the initial location of the drone to the SERVER
 #===================================================================
-SERVER="http://SERVER_IP:PORT/drone"
+SERVER="http://192.168.0.2:5001/drone"
 with requests.Session() as session:
     resp = session.post(SERVER, json=drone_info)
 #===================================================================
